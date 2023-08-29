@@ -1,12 +1,13 @@
 package com.example.autoscoutdomain.useCases
 
-import com.example.autoscoutdomain.dataProvider.carList
+import com.example.autoscoutdomain.dataProvider.CarsProvider.carList
 import com.example.autoscoutdomain.models.Car
 import com.example.autoscoutdomain.models.Image
 import com.example.autoscoutdomain.models.Seller
 import com.example.autoscoutdomain.repos.CarsRepo
 import io.mockk.coEvery
 import io.mockk.mockk
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Assert
 import org.junit.Before
@@ -25,6 +26,7 @@ class FilterCarsTest {
         )
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun `filter cars by make`() = runBlockingTest {
         val expectedResult = listOf(
@@ -67,6 +69,7 @@ class FilterCarsTest {
         Assert.assertEquals(expectedResult, result)
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun `filter cars by colour`() = runBlockingTest {
         val expectedResult = listOf(
@@ -115,6 +118,7 @@ class FilterCarsTest {
     }
 
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun `filter cars by multiple colour`() = runBlockingTest {
         val expectedResult = listOf(
@@ -179,6 +183,7 @@ class FilterCarsTest {
     }
 
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun `filter cars by multiple colour and make`() = runBlockingTest {
         val expectedResult = listOf(
