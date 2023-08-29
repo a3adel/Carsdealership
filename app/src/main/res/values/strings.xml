@@ -1,3 +1,11 @@
 <resources>
   <string name="app_name">AutoScout24</string>
+  <string name="network_error">Please check your connection and try again</string>
+  <string name="api_error">something went wrong with our servers, please try again later</string>
+  <string name="general_error">something went wrong, please try again later</string>
+  <string name="currency">USD</string>
+  <string name="distance_unit">KM</string>
+  <string name="call_seller">Call Seller</string>
+  <string name="try_again">Try Again</string>
+  <string name="no_cars_found">No Cars Found !!</string>
 </resources>

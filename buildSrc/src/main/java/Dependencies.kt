@@ -14,6 +14,7 @@ object Libs {
     const val composeMaterial3 = "androidx.compose.material3:material3"
 
     const val coilCompose = "io.coil-kt:coil-compose:${Versions.coil}"
+    const val constraintLayoutCompose = "androidx.constraintlayout:constraintlayout-compose:${Versions.constraintCompose}"
     // endregion
 
     //region retrofit

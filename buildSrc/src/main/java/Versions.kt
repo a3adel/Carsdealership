@@ -1,4 +1,5 @@
 object Versions {
+    const val constraintCompose: String = "1.0.1"
     const val javaxInject = "1"
     const val coroutines_version = "1.3.9"
     const val mockk = "1.13.7"
@@ -12,7 +13,7 @@ object Versions {
     const val activityCompose = "1.7.2"
 
     const val retrofitVersion = "2.9.0"
-    const val moshiVersion= "1.14.0"
+    const val moshiVersion = "1.14.0"
 
-    const val hiltVersion="2.44"
+    const val hiltVersion = "2.44"
 }

@@ -63,6 +63,8 @@ dependencies {
     implementation(Libs.composeUi)
     implementation(Libs.composePreview)
     implementation(Libs.composeMaterial3)
+    implementation(Libs.constraintLayoutCompose)
+    implementation(Libs.coilCompose)
 
     implementation(Libs.hiltAndroid)
     implementation(project(mapOf("path" to ":AutoScoutDomain")))
