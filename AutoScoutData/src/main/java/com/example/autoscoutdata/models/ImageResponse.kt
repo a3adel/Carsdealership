@@ -6,9 +6,10 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class ImageResponse(
-    @Json(name = "image")
-    val url: String){
-}
+    @Json(name = "url")
+    val url: String? = null
+)
+
 fun ImageResponse.toImage(): Image {
     return Image(
         url = url

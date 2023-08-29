@@ -26,6 +26,7 @@ object Libs {
     //region hilt
     const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
+    const val javaxInject = "javax.inject:javax.inject:${Versions.javaxInject}"
     //endregion
 
 }
@@ -48,5 +49,6 @@ object TestDependencies {
     const val composeUiTestManifest = "androidx.compose.ui:ui-test-manifest"
     const val mockk = "io.mockk:mockk:${Versions.mockk}"
     const val mockk_android = "io.mockk:mockk-android:${Versions.mockk}"
-    const val coroutines_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines_version}"
+    const val coroutines_test =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines_version}"
 }

@@ -1,4 +1,5 @@
 object Versions {
+    const val javaxInject = "1"
     const val coroutines_version = "1.3.9"
     const val mockk = "1.13.7"
     const val kotlinVersion = "1.8.10"

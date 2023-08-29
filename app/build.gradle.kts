@@ -65,6 +65,8 @@ dependencies {
     implementation(Libs.composeMaterial3)
 
     implementation(Libs.hiltAndroid)
+    implementation(project(mapOf("path" to ":AutoScoutDomain")))
+    implementation(project(mapOf("path" to ":AutoScoutData")))
     kapt("com.google.dagger:hilt-android-compiler:2.44")
     testImplementation(TestDependencies.Junit4)
     androidTestImplementation(TestDependencies.androidJunit)

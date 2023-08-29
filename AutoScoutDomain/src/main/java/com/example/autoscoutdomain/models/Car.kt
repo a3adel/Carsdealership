@@ -11,6 +11,6 @@ data class Car(
     val modelline: String? = null,
     val colour: String? = null,
     val seller: Seller ?= null,
-    val images: List<Image> = emptyList(),
+    val images: List<Image> ?=null,
     val description: String?=null
 )

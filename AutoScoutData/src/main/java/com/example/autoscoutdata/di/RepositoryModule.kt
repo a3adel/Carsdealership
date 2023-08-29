@@ -4,6 +4,7 @@ import com.example.autoscoutdata.dataSources.MemoryDataSource
 import com.example.autoscoutdata.dataSources.NetworkDataSource
 import com.example.autoscoutdata.repos.CarsRepImp
 import com.example.autoscoutdomain.repos.CarsRepo
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

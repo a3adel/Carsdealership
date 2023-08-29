@@ -3,6 +3,8 @@ package com.example.autoscoutdata.di
 import android.content.Context
 import com.example.autoscoutdata.BuildConfig
 import com.example.autoscoutdata.apiServices.CarsApiService
+import com.example.autoscoutdata.dataSources.MemoryDataSource
+import com.example.autoscoutdata.dataSources.NetworkDataSource
 import com.example.autoscoutdata.utils.ConnectivityService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -51,5 +53,17 @@ object NetworkModule {
     @Singleton
     fun provideConnectivityService(@ApplicationContext context: Context): ConnectivityService {
         return ConnectivityService(context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideNetworkDataSource(carsApiService: CarsApiService,connectivityService: ConnectivityService): NetworkDataSource {
+        return NetworkDataSource(carsApiService, connectivityService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideMemoryDataSource(): MemoryDataSource {
+        return MemoryDataSource()
     }
 }

@@ -27,7 +27,7 @@ data class CarResponse(
     @Json(name = "seller")
     val seller: SellerResponse? = null,
     @Json(name = "images")
-    val images: List<ImageResponse> = emptyList(),
+    val images: List<ImageResponse> ?= null,
     @Json(name = "description")
     val description: String? = null
 )
@@ -43,7 +43,7 @@ fun CarResponse.toCar(): Car {
         modelline = modelline,
         colour = colour,
         seller = seller?.toSeller(),
-        images = images.map { it.toImage() },
+        images = images?.map { it.toImage() },
         description = description
     )
 }
