@@ -1,6 +1,9 @@
+
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id(Plugins.andrdoidLibrary)
+    id(Plugins.kotlinPlugin)
+    kotlin(Plugins.kapt)
+
 }
 
 android {
@@ -9,6 +12,7 @@ android {
 
     defaultConfig {
         minSdk = 24
+        buildConfigField("String", "BASE_URL", "\"http://private-fe87c-simpleclassifieds.apiary-mock.com/\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -23,21 +27,30 @@ android {
             )
         }
     }
+    buildFeatures{
+        buildConfig = true
+    }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    api(Libs.moshi)
+    api(Libs.moshiRetrofitAdapter)
+    api(Libs.retrofit)
+    api(Libs.hiltAndroid)
+    api(project(mapOf("path" to ":AutoScoutDomain")))
+    kapt(Libs.hiltCompiler)
+
+    testApi(TestDependencies.Junit4)
+    testApi(TestDependencies.Junit4)
+    testApi(TestDependencies.mockk)
+    testApi(TestDependencies.coroutines_test)
 }
