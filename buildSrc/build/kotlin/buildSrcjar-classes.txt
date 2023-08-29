@@ -1,0 +1,1 @@
+E:\AutoScout24\buildSrc\build\classes\kotlin\main\Libs.class;E:\AutoScout24\buildSrc\build\classes\kotlin\main\Plugins.class;E:\AutoScout24\buildSrc\build\classes\kotlin\main\TestDependencies.class;E:\AutoScout24\buildSrc\build\classes\kotlin\main\Versions.class
